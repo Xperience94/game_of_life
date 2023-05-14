@@ -67,17 +67,14 @@ void updateBoard(Board& board){
             
             //ligne du dessus 
             if(max(row-1,0) != row && row >=0){
-                //cout << "je rentr la "<<endl;
                 for(int i = max(col-1,0); i<=min(col+1,nbcols-1); i++){ 
                     nbvoisin+=board[row-1][i];
                 }
             }
             //ligne en dessous
             if(min(row+1,nbrows) != nbrows){
-                //cout << "je rentr la "<<endl;
                 for(int i = max(col-1,0); i<=min(col+1,nbcols-1); i++){
                     //cout << row+1<< " " << i << " "<<board[row+1][i] << endl;
-                    //cout << "je rentr la 2 " <<row+1 <<" "<<i <<endl;
                     nbvoisin+=board[row+1][i];
                 }
             }
